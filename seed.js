@@ -5,153 +5,133 @@ const mongoose = require("mongoose");
 
 const seedProducts = [
   {
-    name: "Zaman Knit Polo",
-    price: 4990,
-    category: "Shirts",
-    description: "Expertly crafted from premium double-knit combed cotton, offering unmatched breathability and a structured, timeless look.",
-    stock: 45,
+    name: "Zari Embroidered Velvet Koti",
+    price: 6990,
+    category: "Women's Kotis",
+    description: "Handcrafted velvet short koti adorned with intricate gold Zari threadwork and floral motifs. Tailored to layer gracefully over plain or festive silk suits & kurtas.",
+    stock: 25,
+    sizes: ["S", "M", "L", "XL", "Custom"],
+    colors: ["#0B3C49", "#1E1E24", "#581825"],
+    colorNames: ["Peacock Teal", "Midnight Black", "Royal Maroon"],
+    images: [
+      "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600",
+      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600",
+      "https://images.unsplash.com/photo-1609357605129-26f69add5d6e?q=80&w=600"
+    ],
+    isFeatured: true,
+    video: "https://assets.mixkit.co/videos/preview/mixkit-fashion-model-in-a-gold-dress-41126-large.mp4"
+  },
+  {
+    name: "Brocade Silk Crop Waistcoat",
+    price: 5490,
+    category: "Women's Kotis",
+    description: "A modern cropped waist-length koti crafted in woven Banarsi brocade with subtle metallic golden thread detailing and dori tassel tie closure.",
+    stock: 18,
     sizes: ["S", "M", "L", "XL"],
-    colors: ["#1E1E24", "#FAF6F0", "#C5A880"],
-    colorNames: ["Charcoal", "Cream", "Taupe"],
+    colors: ["#D4AF37", "#FAF6F0", "#8A2B06"],
+    colorNames: ["Emerald Gold", "Antique Ivory", "Rust Red"],
     images: [
-      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=600",
-      "https://images.unsplash.com/photo-1620799139507-2a76f79a2f4d?q=80&w=600",
-      "https://images.unsplash.com/photo-1581655353564-df123a1eb820?q=80&w=600"
+      "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=600",
+      "https://images.unsplash.com/photo-1604014237800-1c9102c219da?q=80&w=600"
     ],
-    isFeatured: true
+    isFeatured: true,
+    video: "https://assets.mixkit.co/videos/preview/mixkit-woman-modeling-a-black-dress-41125-large.mp4"
   },
   {
-    name: "Classic Linen Kurta",
-    price: 5990,
-    category: "Linen",
-    description: "Tailored from pure high-grade flax linen, this classic kurta represents elegant heritage design blended with modern comfort.",
+    name: "Junior Silk Jacquard Koti",
+    price: 3990,
+    category: "Kids' Waistcoats",
+    description: "Charming handcrafted silk jacquard waistcoat designed for young girls & children wearing kurtas. Lightweight breathable lining with delicate gold tilla borders.",
     stock: 30,
-    sizes: ["S", "M", "L"],
-    colors: ["#FAF6F0", "#C5A880", "#2E3B4E"],
-    colorNames: ["Off-white", "Khaki", "Slate Blue"],
+    sizes: ["2-4Y", "4-6Y", "6-8Y", "8-10Y", "10-12Y"],
+    colors: ["#E8B4B8", "#679436", "#FAF6F0"],
+    colorNames: ["Blush Pink", "Olive Mint", "Ivory Gold"],
     images: [
-      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=600",
-      "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=600"
+      "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?q=80&w=600",
+      "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?q=80&w=600"
     ],
-    isFeatured: true
+    isFeatured: true,
+    video: "https://assets.mixkit.co/videos/preview/mixkit-fashion-model-in-a-gold-dress-41126-large.mp4"
   },
   {
-    name: "Cashmere Knit Cardigan",
-    price: 12500,
-    category: "Outerwear",
-    description: "Woven from 100% fine Mongolian cashmere, featuring ribbed borders and custom tortoiseshell front buttons.",
-    stock: 12,
-    sizes: ["M", "L", "XL"],
-    colors: ["#C5A880", "#1E1E24"],
-    colorNames: ["Caramel", "Black"],
+    name: "Mirror-Work Festive Koti",
+    price: 7990,
+    category: "Women's Kotis",
+    description: "Exquisite handmade mirror-work embroidered short jacket koti. Adds an instant festive statement over eastern dresses, kurtis, and unstitched suits.",
+    stock: 15,
+    sizes: ["S", "M", "L", "XL", "Custom"],
+    colors: ["#1D3557", "#D4AF37", "#7D1D2B"],
+    colorNames: ["Royal Indigo", "Mustard Gold", "Crimson Maroon"],
     images: [
-      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=600",
-      "https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=600"
+      "https://images.unsplash.com/photo-1609357605129-26f69add5d6e?q=80&w=600",
+      "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600"
     ],
-    isFeatured: true
+    isFeatured: true,
+    video: "https://assets.mixkit.co/videos/preview/mixkit-woman-modeling-a-black-dress-41125-large.mp4"
   },
   {
-    name: "Tailored Stretch Chinos",
-    price: 4500,
-    category: "Pants",
-    description: "Premium cotton twill combined with subtle elastane for absolute ease of movement. Cut in a modern slim-tapered silhouette.",
-    stock: 50,
-    sizes: ["30", "32", "34", "36"],
-    colors: ["#C5A880", "#2E3B4E", "#1E1E24"],
-    colorNames: ["Stone", "Navy", "Jet Black"],
+    name: "Kids Royal Velvet Waistcoat",
+    price: 4490,
+    category: "Kids' Waistcoats",
+    description: "Plush velvet short jacket trimmed with antique golden gota work and silk tie strings, crafted for kids' festive celebrations.",
+    stock: 22,
+    sizes: ["2-4Y", "4-6Y", "6-8Y", "8-10Y"],
+    colors: ["#1B263B", "#7D1D2B", "#2D6A4F"],
+    colorNames: ["Royal Navy", "Deep Wine", "Forest Green"],
     images: [
-      "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?q=80&w=600",
-      "https://images.unsplash.com/photo-1542272604-787c3835535d?q=80&w=600"
+      "https://images.unsplash.com/photo-1503944583220-79d8926ad5e2?q=80&w=600",
+      "https://images.unsplash.com/photo-1519689680058-324335c77eba?q=80&w=600"
     ],
-    isFeatured: false
+    isFeatured: false,
+    video: "https://assets.mixkit.co/videos/preview/mixkit-fashion-model-in-a-gold-dress-41126-large.mp4"
   },
   {
-    name: "Premium Embroidered Waistcoat",
-    price: 8990,
-    category: "Outerwear",
-    description: "An classic structured waistcoat designed with delicate tonal embroidery, perfect for formal occasions and celebrations.",
+    name: "Bespoke Hand-Embroidered Cape",
+    price: 9990,
+    category: "Custom Jackets",
+    description: "Custom-made tailored ethnic cape jacket featuring hand-stitched sequins, dabka, and tilla embroidery. Crafted to custom measurements for weddings and special events.",
+    stock: 10,
+    sizes: ["Custom Fit", "S", "M", "L", "XL"],
+    colors: ["#1E1E24", "#D4AF37"],
+    colorNames: ["Noir Gold", "Champagne Gold"],
+    images: [
+      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600",
+      "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=600"
+    ],
+    isFeatured: true,
+    video: "https://assets.mixkit.co/videos/preview/mixkit-woman-modeling-a-black-dress-41125-large.mp4"
+  },
+  {
+    name: "Raw Silk Pearl Waistcoat",
+    price: 6490,
+    category: "Women's Kotis",
+    description: "Pure raw silk waistcoat highlighted with delicate hand-attached pearls and a graceful front dori latkan. Perfect overlay for formal kurtis.",
     stock: 20,
     sizes: ["S", "M", "L", "XL"],
-    colors: ["#1E1E24", "#C5A880"],
-    colorNames: ["Midnight Black", "Gold Dust"],
+    colors: ["#FAF6F0", "#D4AF37", "#A3C1AD"],
+    colorNames: ["Ivory White", "Sand Gold", "Sage Mint"],
     images: [
-      "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?q=80&w=600",
-      "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=600"
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=600",
+      "https://images.unsplash.com/photo-1604014237800-1c9102c219da?q=80&w=600"
     ],
-    isFeatured: true
+    isFeatured: false,
+    video: "https://assets.mixkit.co/videos/preview/mixkit-fashion-model-in-a-gold-dress-41126-large.mp4"
   },
   {
-    name: "Classic Over-Sized Hoodie",
-    price: 5200,
-    category: "Activewear",
-    description: "Cut from ultra-soft heavy fleece with drop shoulders and a double-lined cozy hood, ideal for casual loungewear.",
-    stock: 60,
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["#FAF6F0", "#1E1E24", "#7D1D2B"],
-    colorNames: ["Heather Grey", "Noir", "Crimson"],
+    name: "Bespoke Silk Pret Suit & Koti Set",
+    price: 12990,
+    category: "Apparel & Suits",
+    description: "Extensible Pret collection preview — A 2-piece raw silk suit bundled with a matching hand-embroidered velvet koti. Tailored for special occasions.",
+    stock: 8,
+    sizes: ["S", "M", "L", "Custom"],
+    colors: ["#1E1E24", "#7D1D2B"],
+    colorNames: ["Classic Jet", "Maroon Velvet"],
     images: [
-      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?q=80&w=600",
-      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=600"
+      "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600",
+      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600"
     ],
-    isFeatured: false
-  },
-  {
-    name: "Linen Drawstring Trousers",
-    price: 3990,
-    category: "Pants",
-    description: "Woven in premium lightweight linen blend featuring a relaxed waist drawcord for casual elegance.",
-    stock: 35,
-    sizes: ["S", "M", "L"],
-    colors: ["#FAF6F0", "#C5A880"],
-    colorNames: ["Oatmeal", "Khaki"],
-    images: [
-      "https://images.unsplash.com/photo-1506629082925-63d6314a3389?q=80&w=600"
-    ],
-    isFeatured: false
-  },
-  {
-    name: "Woolen Herringbone Scarf",
-    price: 2500,
-    category: "Accessories",
-    description: "Woven in a luxury woolen blend, providing classic herringbone texture and warmth for winter layering.",
-    stock: 100,
-    sizes: ["One Size"],
-    colors: ["#C5A880", "#1E1E24"],
-    colorNames: ["Tweed Brown", "Charcoal Gray"],
-    images: [
-      "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=600",
-      "https://images.unsplash.com/photo-1584030373081-f37b7bb4fa8e?q=80&w=600"
-    ],
-    isFeatured: false
-  },
-  {
-    name: "Urban Utility Overshirt",
-    price: 4800,
-    category: "Shirts",
-    description: "Heavy canvas cotton overshirt featuring two large utility chest pockets and premium brass snap buttons.",
-    stock: 25,
-    sizes: ["M", "L", "XL"],
-    colors: ["#2E3B4E", "#C5A880"],
-    colorNames: ["Olive Green", "Dusty Tan"],
-    images: [
-      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=600",
-      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=600"
-    ],
-    isFeatured: false
-  },
-  {
-    name: "Pashmina Jacquard Wrap",
-    price: 9500,
-    category: "Accessories",
-    description: "Exquisite hand-finished wrap with details woven in traditional motifs. Extremely light yet beautifully warm.",
-    stock: 15,
-    sizes: ["One Size"],
-    colors: ["#C5A880", "#7D1D2B"],
-    colorNames: ["Antique Ivory", "Maroon"],
-    images: [
-      "https://images.unsplash.com/photo-1520639888713-7851133b1ed0?q=80&w=600"
-    ],
-    isFeatured: true
+    isFeatured: true,
+    video: "https://assets.mixkit.co/videos/preview/mixkit-woman-modeling-a-black-dress-41125-large.mp4"
   }
 ];
 
